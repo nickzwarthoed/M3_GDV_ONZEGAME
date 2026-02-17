@@ -7,9 +7,10 @@ nick:
 ilya:
 ![!plaatje](Ilya-Concept.png)
 
+![!plaatje](grid_tekening2.png)
+
 # het idee
-je bent een auto, je rijd over de straten. de besturing is vervelend
-de rode dingen zijn obstakels, die bewegen heen en weer.
-als de obstakels aan de kant zijn, dan kan je er langs
-als je het obstakel aan raakt dan ga je dood
-er liggen muntjes op de weg, als je ze allemaal hebt dan win je
+je bent een auto op een vliegende race baan.
+je hebt 20 seconde om naar het einde te komen, door de muntjes te pakken krijg je extra tijd.
+er komen elke 5 seconden een haai over de baan springen. als die je aan raakt val je van de baan.
+als je bij het einde komt dan win je.
