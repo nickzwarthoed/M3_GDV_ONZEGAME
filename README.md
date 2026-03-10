@@ -25,3 +25,5 @@ door de text op het scherm
 de haaien zien er eng uit
 
 De vijand: de vijand is een haai en die springt om de paar seconden over de weg heen. 
+
+## hi
