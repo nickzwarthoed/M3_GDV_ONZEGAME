@@ -23,3 +23,5 @@ door de text op het scherm
 
 3. Hoe communiceer ik wat gevaarlijk is?
 de haaien zien er eng uit
+
+De vijand: de vijand is een haai en die springt om de paar seconden over de weg heen. 
