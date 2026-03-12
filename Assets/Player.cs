@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
+    private Rigidbody2D rb;
 
     private bool isGrounded;
 
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>(); 
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
         speed *= 1-(math.abs(Input.GetAxis("Horizontal"))*0.004f);
         transform.position += transform.up * speed;
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckRadius, groundCheckRadius), 0f, groundLayer);
         //Debug.Log(isGrounded);
         if (isGrounded == false)
         {
@@ -47,5 +48,17 @@ public class Player : MonoBehaviour
         }
 
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("Collision detected with: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log(collision.gameObject.transform.eulerAngles.z);
+
+            playerRotation = collision.gameObject.transform.eulerAngles.z;
+            speed = 0.0025f;
+        }
     }
 }
