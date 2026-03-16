@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         //Debug.Log(isGrounded);
         if (isGrounded == false)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
 
